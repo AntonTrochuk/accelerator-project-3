@@ -1,66 +1,73 @@
 .hero__button-container {
-    width: 136px;
-    height: 54px;
-    border: 1px solid $color-border-button;
-    background-color: transparent;
-    border-radius: 30px;
-    box-sizing: border-box;
-    padding: 5px 5px 5px 21px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    color: $color-text-mariner;
-    text-transform: uppercase;
+  width: 136px;
+  height: 54px;
+  border: 1px solid $color-border-button;
+  background-color: transparent;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 5px 5px 5px 21px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: $color-text-mariner;
+  text-transform: uppercase;
 
-    transition: 
-        width 0.3s ease,
-        background-color 0.3s ease,
-        color 0.3s ease;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .hero__button-toggle {
-    display: block;
-    width: 46px;
-    height: 46px;
-    background-color: $color-background-mariner;
-    border-radius: 44px;
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: $color-background-mariner;
+  border-radius: 44px;
+  transition: background-color 0.3s ease;
+  background-image: url("/__spritemap#sprite-menu-view");
 
-    transition: background-color 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero__button-container--active {
-    width: 286px;
-    background-color: $color-background-mariner;
-    color: $color-text-white;
+  width: 286px;
+  background-color: $color-background-mariner;
+  color: $color-text-white;
 }
 
 .hero__button-toggle--active {
-    background-color: $color-background-white;
+  background-color: $color-background-white;
+}
+
+.hero__header-container--close {
+  display: none;
 }
 
 .hero__navigation-list,
 .hero__navigation-list-subgroup {
-    list-style: none;
+  list-style: none;
 }
 
 .hero__navigation-list {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    padding: 35px 25px;
-    margin: 0;
-    border-radius: 16px;
-    width: min-content;
-    background-color: $color-background-mariner;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 35px 25px;
+  margin: 0;
+  border-radius: 16px;
+  width: min-content;
+  background-color: $color-background-mariner;
 }
 
 .hero__navigation-item {
-    color: $color-text-wr;
-    text-transform: uppercase;
+  color: $color-text-wr;
+  text-transform: uppercase;
 }
 
 .hero__navigation-item-subgroup {
-    text-transform: none;
+  text-transform: none;
 }
