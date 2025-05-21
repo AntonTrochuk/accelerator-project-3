@@ -8,3 +8,22 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.page-body {
+  font-family: $basic-font;
+  font-style: normal;
+}
+
+.button-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+}
+
+.text-wr {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 2%;
+}
