@@ -1,8 +1,23 @@
+.hero {
+    position: relative;
+}
+
+.hero__header {
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+
 .hero__button-container {
   width: 136px;
   height: 54px;
   border: 1px solid $color-border-button;
-  background-color: transparent;
+  background-color: $color-background-white;
   border-radius: 30px;
   box-sizing: border-box;
   padding: 5px 5px 5px 21px;
@@ -70,4 +85,62 @@
 
 .hero__navigation-item-subgroup {
   text-transform: none;
+}
+
+.swiper-pagination {
+    top: 201px;
+    left: 0;
+}
+
+.hero__toggle {
+    outline: none;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $color-background-mariner;
+}
+
+.hero__list {
+    padding: 0;
+    margin: 0;
+}
+
+.hero__item  {
+    img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  p {
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+    color: $color-text-tundora;
+  }
+}
+
+.hero__content-title {
+    color: $color-text-mariner;
+}
+
+.hero__link-container {
+    padding: 0 5px 0 21px;
+}
+
+.hero__link {
+    text-transform: uppercase;
+    color: $color-text-mariner;
+    text-decoration: none;
+    width: 154px;
+  height: 44px;
+  border: 1px solid $color-border-button;
+  background-color: $color-background-white;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 5px 5px 5px 21px;
+  margin: 0;
 }
