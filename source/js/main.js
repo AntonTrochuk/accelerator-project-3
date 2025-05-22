@@ -48,7 +48,7 @@ const heroSlider = new Swiper(heroSwiper, {
     bulletActiveClass: 'hero__toggle--active',
     dynamicBullets: false,
     renderBullet: function (index, className) {
-      return `<button class="${className}" role="tab" aria-label="Перейти к слайду ${index + 1}"></button>`;
+      return `<span class="${ className }"></span>`;
     }
   },
 

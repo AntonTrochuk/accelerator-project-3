@@ -1,6 +1,7 @@
 // Vendor
 
 @import "vendor/normalize";
+@import "vendor/swiper";
 
 /* COMMON */
 @import "./common/mixins";
@@ -9,4 +10,4 @@
 @import "./common/global";
 
 /* BLOCKS */
-@import "./blocks/hero.scss";
+@import "./blocks/hero";
