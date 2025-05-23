@@ -28,7 +28,7 @@ function updateSlideFocus(slider) {
 import Swiper from 'swiper';
 import { Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
+import '../sass/vendor/pagination.css';
 
 const heroSwiper = document.querySelector('.swiper');
 const heroSlider = new Swiper(heroSwiper, {

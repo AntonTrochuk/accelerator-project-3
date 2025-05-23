@@ -86,10 +86,17 @@
   text-transform: none;
 }
 
+.hero__pagination-container {
+  width: 80px;
+}
+
 .hero__pagination {
   display: flex;
   gap: 12px;
-  height: 8px;
+  height: 28px;
+  background-color: $color-background-white;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__toggle {
@@ -138,8 +145,14 @@
   }
 }
 
+
 .hero__content-title {
+  display: block;
   color: $color-text-mariner;
+   background-color: $color-background-white;
+   padding: 0 0 0 14px;
+   width: 261px;
+   margin: 0;
 }
 
 .hero__link {
@@ -175,7 +188,13 @@
 .hero__content {
   position: absolute;
   z-index: 5;
-  top: 249px;
+  top: 229px;
+  left: 15px;
+  width: 250px;
+}
+
+.hero__content-wrap {
   background-color: $color-background-white;
   padding: 0 0 0 14px;
 }
+
