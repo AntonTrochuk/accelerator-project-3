@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship</title>
   <link rel="stylesheet" href="sass/style.scss">
-  <link rel="stylesheet" href="sass/vendor/nebo.css">
   <link rel="preload" href="./fonts/Manrope-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Manrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Manrope-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -20,56 +19,57 @@
     <section class="main-container__hero hero" data-test="hero" id="hero">
       <header class="hero__header">
         <img class="hero__logo" src="./img/sprite/logo.svg" width="52" height="52" alt="Логотип проекта Internship.">
-        <button class="hero__button-container" type="button">
-          <span class="hero__button-text button-text">
-            меню
-          </span>
-          <span class="hero__button-toggle">
-          </span>
-        </button>
-        <div class="hero__header-container hero__header-container--close">
-          <nav class="hero__navigation">
-            <ul class="hero__navigation-list">
-              <li class="hero__navigation-item">
-                <span>О проекте</span>
-              </li>
-              <li class="hero__navigation-item">
-                <span>Программы</span>
-                <ul class="hero__navigation-list-subgroup">
-                  <li class="hero__navigation-item-subgroup">
-                    Стажировки
-                  </li>
-                  <li class="hero__navigation-item-subgroup">
-                    Волонтёрство
-                  </li>
-                  <li class="hero__navigation-item-subgroup">
-                    Учёба
-                  </li>
-                  <li class="hero__navigation-item-subgroup">
-                    Религия
-                  </li>
-                </ul>
-              </li>
-              <li class="hero__navigation-item">
-                <span>Как поехать</span>
-              </li>
-              <li class="hero__navigation-item">
-                <span>Отзывы</span>
-              </li>
-              <li class="hero__navigation-item">
-                <span>Новости</span>
-              </li>
-              <li class="hero__navigation-item">
-                <span>Контакты</span>
-              </li>
-            </ul>
-          </nav>
+        <div class="hero__wrapper-section">
+          <button class="hero__button-container" type="button">
+            <span class="hero__button-text button-text">
+              меню
+            </span>
+            <span class="hero__button-toggle">
+            </span>
+          </button>
+          <div class="hero__header-container hero__header-container--close">
+            <nav class="hero__navigation">
+              <ul class="hero__navigation-list">
+                <li class="hero__navigation-item">
+                  <span>О проекте</span>
+                </li>
+                <li class="hero__navigation-item">
+                  <span>Программы</span>
+                  <ul class="hero__navigation-list-subgroup">
+                    <li class="hero__navigation-item-subgroup">
+                      Стажировки
+                    </li>
+                    <li class="hero__navigation-item-subgroup">
+                      Волонтёрство
+                    </li>
+                    <li class="hero__navigation-item-subgroup">
+                      Учёба
+                    </li>
+                    <li class="hero__navigation-item-subgroup">
+                      Религия
+                    </li>
+                  </ul>
+                </li>
+                <li class="hero__navigation-item">
+                  <span>Как поехать</span>
+                </li>
+                <li class="hero__navigation-item">
+                  <span>Отзывы</span>
+                </li>
+                <li class="hero__navigation-item">
+                  <span>Новости</span>
+                </li>
+                <li class="hero__navigation-item">
+                  <span>Контакты</span>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
-
       <div class="hero__container swiper">
-          <div class="hero__pagination swiper-pagination">
-          </div>
+        <div class="hero__pagination swiper-pagination">
+        </div>
         <ul class="hero__list swiper-wrapper">
           <li class="hero__item swiper-slide">
             <picture>
@@ -81,13 +81,17 @@
               <img src="./img/hero/hero_mobile_1@1x.jpg" srcset="./img/hero/hero_mobile_1@2x.jpg 2x" width="320" height="568" alt="Студентка.">
             </picture>
             <div class="hero__content">
-              <h3 class="hero__content-title heading-h3 nebo nebo--br">
+              <div class="hero__content-nebo nebo nebo--tr">
+              </div>
+              <h3 class="hero__content-title heading-h3">
                 Глобальный профессиональный <br>опыт обучения <br>за рубежом
               </h3>
-              <div class="hero__content-wrap nebo">
-                <p>
-                  Погрузитесь в академическую программу, проходя практику <br>в разных городах, ощущая <br>настоящий студенческий <br>стиль жизни!
-                </p>
+              <div class="hero__content-wrap nebo nebo--br">
+                <div class="hero__content-text-section nebo nebo--br">
+                  <p>
+                    Погрузитесь в академическую программу, проходя практику <br>в разных городах, ощущая <br>настоящий студенческий <br>стиль жизни!
+                  </p>
+                </div>
                 <div class="hero__link-container">
                   <a class="hero__link button-text-h" href="#">
                     подробнее
@@ -106,13 +110,17 @@
               <img src="./img/hero/hero_mobile_2@1x.jpg" srcset="./img/hero/hero_mobile_2@2x.jpg 2x" width="320" height="568" alt="Студентка.">
             </picture>
             <div class="hero__content">
-              <h3 class="hero__content-title heading-h3 nebo">
+              <div class="hero__content-nebo nebo nebo--tr">
+              </div>
+              <h3 class="hero__content-title heading-h3">
                 Волонтёрские программы – внесите свой вклад в общество
               </h3>
-              <div class="hero__content-wrap nebo">
-                <p>
-                  Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
-                </p>
+              <div class="hero__content-wrap nebo nebo--br">
+                <div class="hero__content-text-section nebo nebo--br">
+                  <p>
+                    Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                  </p>
+                </div>
                 <div class="hero__link-container">
                   <a class="hero__link button-text-h" href="#">
                     подробнее
@@ -131,13 +139,17 @@
               <img src="./img/hero/hero_mobile_3@1x.jpg" srcset="./img/hero/hero_mobile_3@2x.jpg 2x" width="320" height="568" alt="Студентка.">
             </picture>
             <div class="hero__content">
+              <div class="hero__content-nebo nebo nebo--tr">
+              </div>
               <h3 class="hero__content-title heading-h3">
                 Программы стажировок в крупнейших компаниях мира
               </h3>
-              <div class="hero__content-wrap">
-                <p>
-                  Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
-                </p>
+              <div class="hero__content-wrap nebo nebo--br">
+                <div class="hero__content-text-section nebo nebo--br">
+                  <p>
+                    Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
+                  </p>
+                </div>
                 <div class="hero__link-container">
                   <a class="hero__link button-text-h" href="#">
                     подробнее
