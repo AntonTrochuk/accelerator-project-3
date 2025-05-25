@@ -59,7 +59,7 @@ const heroSlider = new Swiper(heroSwiper, {
     },
     768: {
       slidesPerView: 1,
-      spaceBetween: 18,
+      spaceBetween: 30,
     },
     320: {
       slidesPerView: 1,
