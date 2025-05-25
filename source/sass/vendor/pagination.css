@@ -43,6 +43,15 @@
   left: 50%;
   transform: translate(-181%);
   width: 80px;
+
+  @media (min-width: 768px) {
+    left: 26%;
+  }
+
+  @media (min-width: 1440px) {
+    left: 18%;
+    transform: translate(-186%);
+  }
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {

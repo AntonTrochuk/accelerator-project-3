@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship</title>
   <link rel="stylesheet" href="sass/style.scss">
+  <link rel="stylesheet" href="sass/vendor/pagination.css">
   <link rel="preload" href="./fonts/Manrope-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Manrope-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Manrope-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -36,29 +37,29 @@
                   </button>
                 </li>
                 <li class="hero__navigation-item">
-                  <button class="hero__navigation-button text-wr" type="button" data-toggle="programs">
+                  <button class="hero__navigation-button hero__navigation-button-arrow text-wr" type="button" data-toggle="programs">
                     Программы
                   </button>
                   <ul class="hero__navigation-list-subgroup" id="programs">
                     <li class="hero__navigation-item-subgroup">
-                      <span class=" hero__navigation-text-subgroup text-wr">
+                      <a class=" hero__navigation-text-subgroup text-wr" href="#">
                         Стажировки
-                      </span>
+                      </a>
                     </li>
                     <li class="hero__navigation-item-subgroup">
-                      <span class="hero__navigation-text-subgroup text-wr">
+                      <a class="hero__navigation-text-subgroup text-wr" href="#">
                         Волонтёрство
-                      </span>
+                      </a>
                     </li>
                     <li class="hero__navigation-item-subgroup">
-                      <span class="hero__navigation-text-subgroup text-wr">
+                      <a class="hero__navigation-text-subgroup text-wr" href="#">
                         Учёба
-                      </span>
+                      </a>
                     </li>
                     <li class="hero__navigation-item-subgroup">
-                      <span class="hero__navigation-text-subgroup text-wr">
+                      <a class="hero__navigation-text-subgroup text-wr" href="#">
                         Религия
-                      </span>
+                      </a>
                     </li>
                   </ul>
                 </li>
@@ -73,9 +74,31 @@
                   </button>
                 </li>
                 <li class="hero__navigation-item">
-                  <button class="hero__navigation-button text-wr" type="button" data-toggle="news">
+                  <button class="hero__navigation-button hero__navigation-button-arrow text-wr" type="button" data-toggle="news">
                     Новости
                   </button>
+                  <ul class="hero__navigation-list-subgroup" id="news">
+                    <li class="hero__navigation-item-subgroup">
+                      <a class=" hero__navigation-text-subgroup text-wr" href="#">
+                        Семинары
+                      </a>
+                    </li>
+                    <li class="hero__navigation-item-subgroup">
+                      <a class="hero__navigation-text-subgroup text-wr" href="#">
+                        Волонтёрство
+                      </a>
+                    </li>
+                    <li class="hero__navigation-item-subgroup">
+                      <a class="hero__navigation-text-subgroup text-wr" href="#">
+                        Учёба
+                      </a>
+                    </li>
+                    <li class="hero__navigation-item-subgroup">
+                      <a class="hero__navigation-text-subgroup text-wr" href="#">
+                        Религия
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="hero__navigation-item">
                   <button class="hero__navigation-button  text-wr" type="button" data-toggle="contacts">
@@ -112,7 +135,7 @@
                     Погрузитесь в академическую программу, проходя практику <br>в разных городах, ощущая <br>настоящий студенческий <br>стиль жизни!
                   </p>
                 </div>
-                <div class="hero__link-container">
+                <div class="hero__link-container nebo">
                   <a class="hero__link button-text-h" href="#">
                     подробнее
                   </a>
