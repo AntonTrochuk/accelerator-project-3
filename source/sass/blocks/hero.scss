@@ -31,7 +31,6 @@
 
 .hero__button-container {
   width: 136px;
-  height: 54px;
   border: 1px solid $color-border-button;
   background-color: $color-background-white;
   border-radius: 30px;
@@ -50,10 +49,6 @@
     width 0.1s ease,
     background-color 0.1s ease,
     color 0.3s ease;
-
-  @media (min-width: $desktop-width) {
-    height: 56px;
-  }
 
   &:hover,
   &:focus-visible {
