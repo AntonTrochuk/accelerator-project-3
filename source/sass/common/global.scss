@@ -34,6 +34,81 @@
   }
 }
 
+.button {
+  border: 1px solid $color-border-button;
+  background-color: transparent;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 4px 4px 4px 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  color: $color-text-mariner;
+  text-transform: uppercase;
+  outline: none;
+
+    &::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+    background-color: $color-background-mariner;
+    border-radius: 44px;
+    background-image: url("/__spritemap#sprite-arrow-view");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &:hover {
+    background-color: $color-background-mariner;
+    color: $color-text-white;
+  }
+
+  &:active {
+    background-color: $color-background-mariner;
+    color: $color-text-hover-white;
+  }
+
+  &:disabled {
+    background-color: $color-background-white;
+    color: $color-disabled;
+    border-color: $color-disabled;
+  }
+
+  &:hover::after {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_hover-view");
+    background-size: 10px;
+  }
+
+  &:active::after {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_active-view");
+    background-size: 10px;
+  }
+
+  &:focus-visible::after {
+    background-color: $color-background-mariner;
+    background-image: url("/__spritemap#sprite-arrow_focus-view");
+    background-size: 10px;
+  }
+
+  &:disabled::after {
+    background-color: $color-disabled;
+    background-image: url("/__spritemap#sprite-arrow_disabled-view");
+    background-size: 8px;
+  }
+}
+
 .button-text {
   font-weight: 500;
   font-size: 14px;
@@ -73,5 +148,21 @@
   @media (min-width: $desktop-width) {
     font-size: 54px;
     line-height: 62px;
+  }
+}
+
+.heading-h3-a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 50px;
   }
 }
