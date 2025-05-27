@@ -78,3 +78,56 @@ const heroSlider = new Swiper(heroSwiper, {
 });
 
 heroSlider.update();
+
+const programsSwiper = document.querySelector('.programs-swiper');
+const programsSlider = new Swiper(programsSwiper, {
+  modules: [Navigation],
+  loop: true,
+  speed: 500,
+  effect: 'fade',
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+  },
+
+  navigation: {
+    nextEl: '.programs__button--next',
+    prevEl: '.programs__button--prev',
+    disabledClass: 'disabled',
+  },
+
+  on: {
+    init: function() {
+      this.navigation.update();
+    },
+    slideChange: function() {
+      this.navigation.update();
+    },
+    reachBeginning: function() {
+      this.navigation.prevEl.classList.add('disabled');
+    },
+    reachEnd: function() {
+      this.navigation.nextEl.classList.add('disabled');
+    },
+    fromEdge: function() {
+      this.navigation.prevEl.classList.remove('disabled');
+      this.navigation.nextEl.classList.remove('disabled');
+    },
+    slidesLengthChange: function() {
+      this.navigation.update();
+    }
+  }
+});
+
+programsSlider.navigation.update();

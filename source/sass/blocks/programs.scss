@@ -1,0 +1,77 @@
+.programs {
+  background-color: $color-background-pampas;
+}
+
+.programs__container {
+  width: 290px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+  }
+}
+
+.programs__list {
+    padding: 0;
+}
+
+.programs__item {
+    background-color: $color-background-pampas;
+    position: relative;
+}
+
+.programs__item-content-block {
+    width: 270px;
+    box-sizing: border-box;
+    padding: 18px;
+    background-color: $color-background-white;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translate(-50%);
+
+    --nb-r: 20px;
+    --nb-w: 100px;
+    --nb-h: 0px;
+}
+
+.programs__title {
+    color: $color-text-mariner;
+    margin: 0;
+}
+
+.programs__item-title {
+    color: $color-text-mariner;
+    margin: 0 0 18px 0;
+}
+
+.programs__description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p { 
+        margin: 0;
+        width: 175px;
+        display: block;
+        color: $color-text-tundora;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+
+        @media (min-width: $tablet-width) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @media (min-width: $desktop-width) {
+            line-height: 18px;
+        }
+    }
+}

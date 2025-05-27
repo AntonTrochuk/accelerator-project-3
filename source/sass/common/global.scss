@@ -152,6 +152,44 @@
   }
 }
 
+.button-small-block {
+    .button-small {
+    width: 22px;
+    height: 22px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url("/__spritemap#sprite-button_small_next-view");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+
+    &:hover {
+      background-image: url("/__spritemap#sprite-button_small_hover-view");
+    }
+
+    &:focus-visible {
+      background-image: url("/__spritemap#sprite-button_small_next-view");
+      background-color: $color-background-white;
+    }
+
+    &:active {
+      background-image: url("/__spritemap#sprite-button_small_hover-view");
+      background-color: $color-background-white;
+    }
+
+    &:disabled {
+      background-image: url("/__spritemap#sprite-button_small_disabled-view");
+    }
+  }
+
+  .button-p {
+    rotate: 180deg;
+  }
+}
+
 .button-text {
   font-weight: 500;
   font-size: 14px;
@@ -176,6 +214,22 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+}
+
+.heading-h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 17px;
+  }
 }
 
 .heading-h3 {
