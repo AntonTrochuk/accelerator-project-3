@@ -114,6 +114,44 @@
   }
 }
 
+.button-secondary {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: $color-background-mariner;
+  border-radius: 44px;
+  background-image: url("/__spritemap#sprite-arrow-view");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_hover-view");
+    background-size: 10px;
+  }
+
+  &:active{
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_active-view");
+    background-size: 10px;
+  }
+
+  &:focus-visible {
+    background-color: $color-background-mariner;
+    background-image: url("/__spritemap#sprite-arrow_focus-view");
+    background-size: 10px;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    background-image: url("/__spritemap#sprite-arrow_disabled-view");
+    background-size: 8px;
+  }
+}
+
 .button-text {
   font-weight: 500;
   font-size: 14px;
