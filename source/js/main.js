@@ -26,7 +26,7 @@ function updateSlideFocus(slider) {
 }
 
 import Swiper from 'swiper';
-import { Pagination, Navigation} from 'swiper/modules';
+import { Pagination, Navigation, Scrollbar} from 'swiper/modules';
 import 'swiper/css';
 import '../sass/vendor/pagination.css';
 
@@ -81,15 +81,23 @@ heroSlider.update();
 
 const programsSwiper = document.querySelector('.programs-swiper');
 const programsSlider = new Swiper(programsSwiper, {
-  modules: [Navigation],
-  loop: true,
+  modules: [Navigation, Scrollbar],
+  loop: false,
   speed: 500,
   effect: 'fade',
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    snapOnRelease: true,
+    hide: false,
+    dragSize: '326px'
+  },
 
   breakpoints: {
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
+      allowTouchMove: false,
     },
     768: {
       slidesPerView: 2,
@@ -130,4 +138,4 @@ const programsSlider = new Swiper(programsSwiper, {
   }
 });
 
-programsSlider.navigation.update();
+programsSlider.update();
