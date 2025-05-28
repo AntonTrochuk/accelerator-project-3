@@ -240,6 +240,21 @@
   line-height: 16px;
 }
 
+.text-g {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
+
 .heading-h4 {
   font-weight: 400;
   font-size: 16px;
@@ -280,6 +295,21 @@
   @media (min-width: $tablet-width) {
     font-size: 34px;
     line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+  }
+}
+
+.heading-h3-g {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
   }
 
   @media (min-width: $desktop-width) {
