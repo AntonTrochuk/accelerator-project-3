@@ -221,6 +221,30 @@
   letter-spacing: 0.28px;
 }
 
+.button-text-p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.button-text-n {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
+}
+
 .button-text-h {
   font-weight: 500;
   font-size: 12px;
@@ -232,6 +256,13 @@
     line-height: 14px;
     letter-spacing: 0.28px;
   }
+}
+
+.text-time {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
 }
 
 .text-wr {
@@ -315,5 +346,21 @@
   @media (min-width: $desktop-width) {
     font-size: 32px;
     line-height: 36px;
+  }
+}
+
+.heading-h3-n {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 26px;
   }
 }
