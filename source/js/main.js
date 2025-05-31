@@ -139,3 +139,59 @@ const programsSlider = new Swiper(programsSwiper, {
 });
 
 programsSlider.update();
+
+// БЛОК news
+
+const newsSwiper = document.querySelector('.news-swiper');
+const newsSlider = new Swiper(newsSwiper, {
+  modules: [Navigation],
+  loop: false,
+  speed: 500,
+  effect: 'fade',
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      allowTouchMove: false,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+  },
+
+  navigation: {
+    nextEl: '.news__button--next',
+    prevEl: '.news__button--prev',
+    disabledClass: 'disabled',
+  },
+
+  on: {
+    init: function() {
+      this.navigation.update();
+    },
+    slideChange: function() {
+      this.navigation.update();
+    },
+    reachBeginning: function() {
+      this.navigation.prevEl.classList.add('disabled');
+    },
+    reachEnd: function() {
+      this.navigation.nextEl.classList.add('disabled');
+    },
+    fromEdge: function() {
+      this.navigation.prevEl.classList.remove('disabled');
+      this.navigation.nextEl.classList.remove('disabled');
+    },
+    slidesLengthChange: function() {
+      this.navigation.update();
+    }
+  }
+});
+
+newsSlider.update();
