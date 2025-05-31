@@ -26,7 +26,7 @@ function updateSlideFocus(slider) {
 }
 
 import Swiper from 'swiper';
-import { Pagination, Navigation, Scrollbar} from 'swiper/modules';
+import { Pagination, Navigation, Scrollbar, Grid} from 'swiper/modules';
 import 'swiper/css';
 import '../sass/vendor/pagination.css';
 
@@ -144,7 +144,7 @@ programsSlider.update();
 
 const newsSwiper = document.querySelector('.news-swiper');
 const newsSlider = new Swiper(newsSwiper, {
-  modules: [Navigation],
+  modules: [Navigation, Grid],
   loop: false,
   speed: 500,
   effect: 'fade',
@@ -157,12 +157,24 @@ const newsSlider = new Swiper(newsSwiper, {
     },
     768: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 30,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
     },
     320: {
       slidesPerView: 1,
-      spaceBetween: 30,
+      slidesPerGroup: 2,
+      spaceBetween: 20,
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
     },
+    spaceBetween: 20,
+    slidesPerGroup: 2,
   },
 
   navigation: {
