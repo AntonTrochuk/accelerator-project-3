@@ -152,8 +152,11 @@ const newsSlider = new Swiper(newsSwiper, {
   breakpoints: {
     1200: {
       slidesPerView: 3,
-      spaceBetween: 30,
-      allowTouchMove: false,
+      spaceBetween: 32,
+      grid: {
+        rows: 1,
+        fill: 'column',
+      },
     },
     768: {
       slidesPerView: 2,
@@ -173,8 +176,6 @@ const newsSlider = new Swiper(newsSwiper, {
         fill: 'column',
       },
     },
-    spaceBetween: 20,
-    slidesPerGroup: 2,
   },
 
   navigation: {

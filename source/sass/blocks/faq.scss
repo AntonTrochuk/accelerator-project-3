@@ -1,0 +1,337 @@
+.faq {
+  background-color: $color-background-pampas;
+}
+
+.faq__container {
+  width: 290px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    padding: 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1028px;
+    padding: 71px 0 60px;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  color: $color-text-mariner;
+  margin: 0 0 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 71px;
+  }
+}
+
+.faq__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq__item {
+  p {
+    display: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-text-pampas;
+    margin: 0;
+    padding: 0 15px 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 30px 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      line-height: 26px;
+      padding: 0 40px 40px;
+    }
+  }
+
+  p br:nth-child(2) {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.faq__item-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+  padding: 20px 15px;
+  border: 2px solid $color-background-mariner;
+  border-radius: 14px;
+  width: 100%;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-background-white;
+  }
+
+  &:hover .faq__button-toggle,
+  &:focus-visible .faq__button-toggle {
+    background-color: $color-background-white;
+  }
+
+  &:hover .faq__button-toggle::after,
+  &:focus-visible .faq__button-toggle::after {
+    background-color: $color-background-mariner;
+  }
+
+  &:hover .faq__button-toggle::before,
+  &:focus-visible .faq__button-toggle::before {
+    background-color: $color-background-mariner;
+  }
+
+  &:active {
+    background-color: $color-background-white;
+  }
+
+  &:active .faq__subtitle {
+    color: $color-text-tropaz;
+  }
+
+  &:active .faq__button-toggle {
+    background-color: $color-background-tropaz;
+  }
+
+  &:active .faq__button-toggle::after {
+    background-color: $color-background-white;
+  }
+
+  &:active .faq__button-toggle::before {
+    background-color: $color-background-white;
+  }
+}
+
+.faq__subtitle {
+  color: $color-text-mariner;
+  width: 200px;
+  margin: 0;
+  text-align: start;
+
+  @media (min-width: $tablet-width) {
+    width: 564px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 894px;
+  }
+}
+
+.faq__button-toggle {
+  width: 40px;
+  height: 40px;
+  background-color: $color-background-mariner;
+  border: 1px solid $color-background-mariner;
+  box-sizing: border-box;
+  border-radius: 30px;
+  outline: none;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    align-self: self-start;
+  }
+}
+
+.faq__button-toggle::after,
+.faq__button-toggle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-background-white;
+}
+
+.faq__button-toggle::after {
+  width: 1px;
+  height: 18px;
+}
+
+.faq__button-toggle::before {
+  width: 18px;
+  height: 1px;
+}
+
+.faq__item--active {
+  background-color: $color-background-mariner;
+  border-radius: 14px;
+  border: 2px solid $color-background-mariner;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 16px;
+  }
+
+  .faq__item-button {
+    padding: 18px 13px 22px;
+
+    @media (min-width: $tablet-width) {
+      padding: 28px 28px 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 38px 38px 40px;
+    }
+  }
+
+  .faq__item-button:hover,
+  .faq__item-button:focus-visible {
+    background-color: $color-background-mariner;
+  }
+
+  .faq__button-toggle:hover,
+  .faq__button-toggle:focus-visible {
+    background-color: $color-background-mariner;
+    border-color: $color-background-white;
+  }
+
+  &:active .faq__item-button {
+    border-color: $color-background-tropaz;
+  }
+
+  .faq__item-button:active {
+    background-color: $color-background-tropaz;
+  }
+
+  .faq__item-button:active .faq__subtitle {
+    color: $color-text-white;
+  }
+
+  .faq__subtitle {
+    color: $color-text-white;
+  }
+
+  p {
+    display: block;
+    margin: -4px 0 0;
+    border-radius: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin: -12px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: -22px 0 0;
+    }
+  }
+
+  p br {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  .faq__button-toggle {
+    background-color: $color-background-white;
+    border-color: $color-background-white;
+  }
+
+  .faq__button-toggle::after {
+    display: none;
+  }
+
+  .faq__button-toggle::before {
+    background-color: $color-background-mariner;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-background-white;
+  }
+
+  &:hover .faq__button-toggle,
+  &:focus-visible .faq__button-toggle {
+    border-color: $color-background-white;
+    background-color: $color-background-mariner;
+  }
+
+  &:hover .faq__button-toggle::before,
+  &:focus-visible .faq__button-toggle::before {
+    background-color: $color-background-white;
+  }
+
+  &:active {
+    border-color: $color-background-tropaz;
+    background-color: $color-background-tropaz;
+  }
+
+  &:active .faq__button-toggle {
+    border-color: $color-background-white;
+    background-color: $color-background-white;
+  }
+
+  &:active .faq__button-toggle::before {
+    background-color: $color-background-mariner;
+  }
+}
+
+.faq__tab2 {
+  br {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.faq__tab4 {
+  br:nth-child(1) {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  br:nth-child(2) {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.faq__tab5 {
+  br {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
