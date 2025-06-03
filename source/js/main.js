@@ -161,58 +161,34 @@ const newsSlider = new Swiper(newsSwiper, {
     prevEl: '.news__button--prev',
     disabledClass: 'disabled',
   },
-
-  on: {
-    init: function() {
-      this.navigation.update();
-    },
-    slideChange: function() {
-      this.navigation.update();
-    },
-    reachBeginning: function() {
-      this.navigation.prevEl.classList.add('disabled');
-    },
-    reachEnd: function() {
-      this.navigation.nextEl.classList.add('disabled');
-    },
-    fromEdge: function() {
-      this.navigation.prevEl.classList.remove('disabled');
-      this.navigation.nextEl.classList.remove('disabled');
-    },
-    slidesLengthChange: function() {
-      this.navigation.update();
-    }
-  }
 });
 
 newsSlider.update();
-
 
 const reviewsSlider = new Swiper('.reviews-swiper', {
   modules: [Navigation, Scrollbar],
   loop: false,
   speed: 500,
+  effect: 'slide',
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true,
     snapOnRelease: true,
     hide: false,
-    dragSize: '326px'
+    dragSize: '326px',
   },
   breakpoints: {
     1200: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 32,
     },
     768: {
-      slidesPerView: 1.4,
+      slidesPerView: 1,
       spaceBetween: 30,
-      effect: 'slide',
     },
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      effect: 'slide',
     },
   },
   navigation: {
@@ -223,3 +199,13 @@ const reviewsSlider = new Swiper('.reviews-swiper', {
 });
 
 reviewsSlider.update();
+
+const getScrollbarDragSize = () => {
+  const drag = document.querySelector('.swiper-scrollbar-drag');
+
+  if (window.innerWidth >= 1200) {
+    drag.style.width = '394px';
+  }
+};
+
+getScrollbarDragSize();
