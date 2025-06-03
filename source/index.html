@@ -670,35 +670,80 @@
       </div>
     </section>
     <section class="main-container__reviews reviews" data-test="reviews">
-      <div class="reviews__container">
-        <h3 class="reviews__title">
+      <div class="reviews__container reviews-swiper">
+        <h3 class="reviews__title heading-h3-a">
           Отзывы
         </h3>
-        <ul class="reviews__list">
-          <li class="reviews__item">
-            <div class="reviews__item-header">
+        <ul class="reviews__list swiper-wrapper">
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__item-block">
+              <div class="reviews__item-header">
+                <div class="reviews__header-profile-block">
+                  <picture>
+                    <source media="(min-width:1440px)" width="90" height="90" type="image/webp" srcset="./img/reviews/avatar_desktop1@1x.webp 1x, ./img/reviews/avatar_desktop1@2x.webp 2x">
+                    <source media="(min-width: 768px)" width="90" height="90" type="image/webp" srcset="./img/reviews/avatar_tablet1@1x.webp 1x, ./img/reviews/avatar_tablet1@2x.webp 2x">
+                    <source width="60" height="60" type="image/webp" srcset="./img/reviews/avatar_mobile1@1x.webp 1x, ./img/reviews/avatar_mobile1@2x.webp 2x">
+                    <source media="(min-width:1440px)" width="90" height="90" type="image/jpg" srcset="./img/reviews/avatar_desktop1@1x.png 1x, ./img/reviews/avatar_desktop1@2x.png 2x">
+                    <source media="(min-width: 768px)" width="90" height="90" type="image/jpg" srcset="./img/reviews/avatar_tablet1@1x.png 1x, ./img/reviews/avatar_tablet1@2x.png 2x">
+                    <img src="./img/reviews/avatar_mobile1@1x.png" srcset="./img/reviews/avatar_mobile1@2x.png 2x" width="60" height="60" alt="Фото пользователя.">
+                  </picture>
+                  <span class="reviews__author-name text-r">
+                    Лола <br>Алекс
+                  </span>
+                </div>
+                <div class="reviews__author-block">
+                    <dl class="reviews__author-program">
+                      <dt>Программа</dt>
+                      <dd>Masa Art Challenge</dd>
+                    </dl>
+                    <dl class="reviews__author-data">
+                      <dt>Дата</dt>
+                      <dd>Осень 2022</dd>
+                    </dl>
+                </div>
+              </div>
+              <div class="reviews__text-block">
+                <span class="reviews__text-subtitle heading-h3-n">
+                  Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
+                </span>
+                <p>
+                  Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание
+                  путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую
+                  огромную благодарность за предоставленную мне возможность.
+                </p>
+              </div>
+            </div>
+            
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__item-block">
+              <div class="reviews__item-header">
               <div class="reviews__header-profile-block">
                 <picture>
-                  <source media="(min-width:1440px)" width="90" height="90" type="image/webp" srcset="./img/reviews/avatar_desktop1@1x.webp 1x, ./img/reviews/avatar_desktop1@2x.webp 2x">
-                  <source media="(min-width: 768px)" width="90" height="90" type="image/webp" srcset="./img/reviews/avatar_tablet1@1x.webp 1x, ./img/reviews/avatar_tablet1@2x.webp 2x">
-                  <source width="60" height="60" type="image/webp" srcset="./img/reviews/avatar_mobile1@1x.webp 1x, ./img/reviews/avatar_mobile1@2x.webp 2x">
-                  <source media="(min-width:1440px)" width="90" height="90" type="image/jpg" srcset="./img/reviews/avatar_desktop1@1x.png 1x, ./img/reviews/avatar_desktop1@2x.png 2x">
-                  <source media="(min-width: 768px)" width="90" height="90" type="image/jpg" srcset="./img/reviews/avatar_tablet1@1x.png 1x, ./img/reviews/avatar_tablet1@2x.png 2x">
-                  <img src="./img/reviews/avatar_mobile1@1x.png" srcset="./img/reviews/avatar_mobile1@2x.png 2x" width="60" height="60" alt="Фото пользователя.">
+                  <source media="(min-width:1440px)" width="90" height="90" type="image/webp" srcset="./img/reviews/avatar_desktop2@1x.webp 1x, ./img/reviews/avatar_desktop2@2x.webp 2x">
+                  <source media="(min-width: 768px)" width="90" height="90" type="image/webp" srcset="./img/reviews/avatar_tablet2@1x.webp 1x, ./img/reviews/avatar_tablet2@2x.webp 2x">
+                  <source width="60" height="60" type="image/webp" srcset="./img/reviews/avatar_mobile2@1x.webp 1x, ./img/reviews/avatar_mobile2@2x.webp 2x">
+                  <source media="(min-width:1440px)" width="90" height="90" type="image/jpg" srcset="./img/reviews/avatar_desktop2@1x.png 1x, ./img/reviews/avatar_desktop2@2x.png 2x">
+                  <source media="(min-width: 768px)" width="90" height="90" type="image/jpg" srcset="./img/reviews/avatar_tablet2@1x.png 1x, ./img/reviews/avatar_tablet2@2x.png 2x">
+                  <img src="./img/reviews/avatar_mobile2@1x.png" srcset="./img/reviews/avatar_mobile2@2x.png 2x" width="60" height="60" alt="Фото пользователя.">
                 </picture>
-                <span class="reviews__author-name">
+                <span class="reviews__author-name text-r">
                   Лола <br>Алекс
                 </span>
               </div>
-              <dl class="reviews__author-data">
-                <dt>программа</dt>
-                <dd>Masa Art Challenge</dd>
-                <dt>Дата</dt>
-                <dd>Осень 2022</dd>
-              </dl>
+              <div class="reviews__author-block">
+                <dl class="reviews__author-program">
+                  <dt>Программа</dt>
+                  <dd>Masa Art Challenge</dd>
+                </dl>
+                <dl class="reviews__author-data">
+                  <dt>Дата</dt>
+                  <dd>Осень 2022</dd>
+                </dl>
+              </div>
             </div>
             <div class="reviews__text-block">
-              <span>
+              <span class="reviews__text-subtitle heading-h3-n">
                 Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
               </span>
               <p>
@@ -709,7 +754,23 @@
             </div>
           </li>
         </ul>
-      </div>
+        <div class="reviews__footer-block">
+          <div class="reviews__scrollbar swiper-scrollbar">
+          </div>
+          <div class="reviews__button-block button-small-block">
+            <button class="reviews__button reviews__button--prev button-small button-p" type="button">
+              <span class="visually-hidden">
+                Назад
+              </span>
+            </button>
+            <button class="reviews__button reviews__button--next button-small button-n" type="button">
+              <span class="visually-hidden">
+                Следующая
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>        
     </section>
   </main>
   <script type="module" src="js/main.js"></script>
