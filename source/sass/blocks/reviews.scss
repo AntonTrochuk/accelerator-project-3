@@ -162,21 +162,26 @@
     margin: 0;
   }
 
-  dt {
+  .reviews__author-program-title {
     font-weight: 400;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.12px;
     text-transform: uppercase;
     color: $color-text-mariner;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
-  dd {
+  .reviews__author-program-subtitle {
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     color: $color-text-tundora;
     margin: 0;
+    padding: 0;
+    display: block;
 
     @media (min-width: $tablet-width) {
       font-size: 14px;
