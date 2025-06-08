@@ -1,0 +1,64 @@
+.form {
+  background-color: $color-background-pampas;
+  background-image:
+    image-set(
+      url("../../img/form/form_mobile@1x.webp") 1x,
+      url("../../img/form/form_mobile@2x.webp") 2x,
+      url("../../img/form/form_mobile@1x.jpg") 1x,
+      url("../../img/form/form_mobile@2x.jpg") 2x
+    );
+  padding: 43px 0 40px;
+}
+
+.form__container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 15px 27px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: $color-background-mariner;
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    padding: 50px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1028px;
+    padding: 71px 0 60px;
+  }
+}
+
+.form__title {
+  color: $color-text-white;
+  margin: 0 0 10px;
+}
+
+.form__text {
+  color: $color-text-pampas;
+  margin: 0 0 20px;
+}
+
+.form__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__input {
+  background-color: transparent;
+  border: 1px solid $color-border-white-opacity-3;
+  border-radius: 8px;
+  width: 270px;
+  height: 50px;
+  box-sizing: border-box;
+
+  &--feedback {
+    min-height: 94px;
+  }
+}
+
+.form__label,
+.checkbox__input {
+  color: $color-text-pampas-opacity;
+}
