@@ -1,5 +1,9 @@
 .form {
   background-color: $color-background-pampas;
+  padding: 40px 0;
+}
+
+.form__container {
   background-image:
     image-set(
       url("../../img/form/form_mobile@1x.webp") 1x,
@@ -10,7 +14,7 @@
   padding: 43px 0 40px;
 }
 
-.form__container {
+.form__content {
   width: 300px;
   margin: 0 auto;
   padding: 15px 15px 27px;
@@ -42,7 +46,16 @@
 .form__list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 0 20px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .form__input {
@@ -61,4 +74,100 @@
 .form__label,
 .checkbox__input {
   color: $color-text-pampas-opacity;
+}
+
+.select__button {
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  background-image: url("/__spritemap#sprite-arrow_down-view");
+  rotate: 180deg;
+  position: absolute;
+  top: 18px;
+  right: 31px;
+}
+
+.form__select-wrap {
+  position: relative;
+}
+
+.select__list {
+  padding: 0;
+  margin: 0;
+}
+
+.select__item {
+  display: none;
+  width: 260px;
+  height: 52px;
+  box-sizing: border-box;
+  border: 1px solid $color-border-white-opacity-3;
+  border-radius: 8px;
+
+  &--active {
+    display: block;
+  }
+}
+
+.form__item-checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form__label-checkbox {
+  color: $color-text-white;
+}
+
+.form__input-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 2px;
+  outline: none;
+}
+
+.form__button-container {
+  border: 1px solid $color-background-white;
+  background-color: transparent;
+  width: 260px;
+  height: 44px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 4px 4px 4px 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  color: $color-text-white;
+  text-transform: uppercase;
+  outline: none;
+  gap: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding: 4px 4px 4px 30px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+    background-color: $color-background-white;
+    border-radius: 44px;
+    background-image: url("/__spritemap#sprite-arrow_mariner-view");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+      margin-left: 31px;
+    }
+  }
 }
