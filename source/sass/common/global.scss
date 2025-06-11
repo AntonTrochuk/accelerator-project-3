@@ -296,6 +296,21 @@
   }
 }
 
+.text-f {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 17px;
+  }
+}
+
 .text-r {
   font-weight: 400;
   font-size: 14px;
@@ -418,5 +433,20 @@
   @media (min-width: $desktop-width) {
     font-size: 28px;
     line-height: 34px;
+  }
+}
+
+.copyright-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
