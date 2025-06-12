@@ -6,9 +6,11 @@
 
 import { wrapperMenu } from './wrapper-menu';
 import {faqTab} from './faq';
+import {openSelectList} from './open-select';
 
 wrapperMenu();
 faqTab();
+openSelectList();
 
 function updateSlideFocus(slider) {
   slider.slides.forEach((slide, index) => {

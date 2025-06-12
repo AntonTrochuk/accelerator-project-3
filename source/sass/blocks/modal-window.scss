@@ -1,144 +1,40 @@
-.form {
-  background-color: $color-background-pampas;
-  padding: 40px 0;
+.modal-window {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark-overlay;
+  top: 0;
+  z-index: 999;
+  padding: 23px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 0;
+    padding: 204px 0;
+    left: 50%;
+    transform: translate(-50%);
   }
 
-  @media (min-width: $desktop-width) {
-    padding: 60px 0;
+  &--active {
+    display: block;
   }
 }
 
-.form__container {
-  background-image:
-    image-set(
-      url("../../img/form/form_mobile@1x.webp") 1x,
-      url("../../img/form/form_mobile@2x.webp") 2x,
-      url("../../img/form/form_mobile@1x.jpg") 1x,
-      url("../../img/form/form_mobile@2x.jpg") 2x
-    );
-  padding: 43px 0 40px;
-
-  @media (min-width: $tablet-width) {
-    background-image: none;
-    width: 652px;
-    padding: 0;
-    margin: 0 auto;
-    position: relative;
-    z-index: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1240px;
-  }
-
-  &::after {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      content: "";
-      display: block;
-      width: 652px;
-      height: 780px;
-      position: absolute;
-      background-image:
-        image-set(
-          url("../../img/form/form_tablet@1x.webp") 1x,
-          url("../../img/form/form_tablet@2x.webp") 2x,
-          url("../../img/form/form_tablet@1x.jpg") 1x,
-          url("../../img/form/form_tablet@2x.jpg") 2x
-        );
-      top: 0;
-      left: 0;
-      z-index: -1;
-      border-radius: 16px;
-      background-repeat: no-repeat;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 1240px;
-      height: 800px;
-      background-image:
-        image-set(
-          url("../../img/form/form_desktop@1x.webp") 1x,
-          url("../../img/form/form_desktop@2x.webp") 2x,
-          url("../../img/form/form_desktop@1x.jpg") 1x,
-          url("../../img/form/form_desktop@2x.jpg") 2x
-        );
-    }
-  }
-}
-
-.form__content {
-  width: 300px;
+.modal-window__section {
+  width: 290px;
   margin: 0 auto;
-  padding: 15px 15px 27px;
-  box-sizing: border-box;
+  padding: 40px 15px;
+  background-color: $color-background-white;
   border-radius: 16px;
-  background-color: $color-background-mariner;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    width: 442px;
-    padding: 41px 40px 36px;
-    margin: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 490px;
-    padding: 44px 70px 40px;
+    width: 510px;
   }
 }
 
-.form__title {
-  color: $color-text-white;
-  margin: 0 0 10px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 31px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 34px;
-  }
-}
-
-.form__text {
-  color: $color-text-pampas;
-  margin: 0 0 20px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 40px;
-  }
-}
-
-.form__list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 0 0 20px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 40px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 38px;
-  }
-}
-
-.form__item {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.form__input {
+.modal-window__input {
   background-color: transparent;
-  border: 1px solid $color-border-white-opacity-3;
+  border: 1px solid $color-border-tundora-opacity-3;
   border-radius: 8px;
   width: 270px;
   height: 50px;
@@ -161,12 +57,12 @@
   }
 }
 
-.form__label,
-.checkbox__input {
+.modal-window__label,
+.modal-window__checkbox-input {
   color: $color-text-pampas-opacity;
 }
 
-.select__button {
+.modal-window__select-button {
   width: 16px;
   height: 16px;
   background-color: transparent;
@@ -187,11 +83,11 @@
   }
 }
 
-.form__select-wrap {
+.modal-window__select-wrap {
   position: relative;
 }
 
-.select__list {
+.modal-window__select-list {
   display: none;
   margin: 5px 0 0;
   list-style: none;
@@ -215,7 +111,7 @@
   }
 }
 
-.select__item {
+.modal-window__select-item {
   color: $color-text-tundora;
   padding: 17px 20px;
   cursor: pointer;
@@ -226,17 +122,17 @@
   }
 }
 
-.select__item:hover:first-child {
+.modal-window__select-item:hover:first-child {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 
-.select__item:hover:last-child {
+.modal-window__select-item:hover:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-.select__fake-input {
+.modal-window__select-fake-input {
   width: 260px;
   height: 52px;
   box-sizing: border-box;
@@ -257,13 +153,13 @@
   }
 }
 
-.form__item-checkbox {
+.modal-window__item-checkbox {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.form__label-checkbox {
+.modal-window__label-checkbox {
   color: $color-text-white;
 
   br {
@@ -273,7 +169,7 @@
   }
 }
 
-.form__input-checkbox {
+.modal-window__input-checkbox {
   width: 20px;
   height: 20px;
   border: 1px solid transparent;
@@ -282,7 +178,7 @@
   outline: none;
 }
 
-.form__button-container {
+.modal-window__button-container {
   border: 1px solid $color-background-white;
   background-color: transparent;
   width: 260px;
