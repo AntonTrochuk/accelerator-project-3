@@ -5,8 +5,10 @@
 
 
 import { wrapperMenu } from './wrapper-menu';
+import {faqTab} from './faq';
 
 wrapperMenu();
+faqTab();
 
 function updateSlideFocus(slider) {
   slider.slides.forEach((slide, index) => {
