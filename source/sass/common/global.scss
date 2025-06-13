@@ -361,6 +361,21 @@
   }
 }
 
+.text-i-mw {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
 .heading-h3 {
   font-weight: 400;
   font-size: 22px;

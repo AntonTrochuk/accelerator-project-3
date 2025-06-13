@@ -17,7 +17,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page-body body-modal-window">
+<body class="page-body">
   <main class="main-container">
     <h1 class="visually-hidden">
       Internship - Глобальный профессиональный опыт обучения за рубежом
@@ -998,32 +998,37 @@
     </div>
   </footer>
 
-  <div class="modal-window modal-window--active">
+  <div class="modal-window">
     <div class="modal-window__section">
+      <button class="modal-window__button" type="button">
+        <span class="visually-hidden">
+          Закрыть модальное окно
+        </span>
+      </button>
       <div class="modal-window__text-block">
         <h3 class="modal-window__title heading-h3-g">
           Напишите нам
         </h3>
         <p class="modal-window__text text-g">
-          Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!
+          Оставьте ваши контакты, <br>если у вас остались вопросы — <br>мы на них ответим!
         </p>
       </div>
       <form action="https://echo.htmlacademy.ru/" method="post">
         <ul class="modal-window__list">
           <li class="modal-window__item modal-window__item--name">
-            <label class="modal-window__label text-i" for="modal-name">
+            <label class="modal-window__label text-i-mw" for="modal-name">
               Имя
             </label>
             <input class="modal-window__input modal-window__input--name" type="text" id="modal-name" name="modal-name" pattern="^[a-zA-Zа-яА-ЯЁё \-]+$" minlength="2" maxlength="32" required>
           </li>
           <li class="modal-window__item modal-window__item--phone">
-            <label class="modal-window__label text-i" for="modal-phone">
+            <label class="modal-window__label text-i-mw" for="modal-phone">
               Телефон
             </label>
             <input class="modal-window__input modal-window__input--phone" type="tel" id="modal-phone" name="modal-phone" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
           </li>
           <li class="modal-window__item modal-window__item--select">
-            <label class="modal-window__label text-i" for="modal-city">
+            <label class="modal-window__label text-i-mw" for="modal-city">
               Выберите город
             </label>
             <div class="modal-window__select-wrap select">
@@ -1051,7 +1056,7 @@
           <li class="modal-window__item-checkbox">
             <input class="modal-window__input-checkbox" type="checkbox" id="modal-checkbox" name="checkbox" required>
             <label class="modal-window__label-checkbox text-ch" for="modal-checkbox">
-              Я согласен на обработку моих персональных <br>данных
+              Я согласен на обработку моих персональных данных
             </label>
           </li>
         </ul>

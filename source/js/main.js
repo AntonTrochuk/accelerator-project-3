@@ -7,10 +7,14 @@
 import { wrapperMenu } from './wrapper-menu';
 import {faqTab} from './faq';
 import {openSelectList} from './open-select';
+import {openModal} from './open-modal-window';
+import {formValid} from './form-valid';
 
 wrapperMenu();
 faqTab();
 openSelectList();
+openModal();
+formValid();
 
 function updateSlideFocus(slider) {
   slider.slides.forEach((slide, index) => {

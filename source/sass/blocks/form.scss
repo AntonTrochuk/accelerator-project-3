@@ -143,6 +143,8 @@
   width: 270px;
   height: 50px;
   box-sizing: border-box;
+  outline: none;
+  color: $color-text-white;
 
   &--feedback {
     min-height: 94px;
@@ -158,6 +160,11 @@
 
   @media (min-width: $desktop-width) {
     width: 350px;
+  }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-border-error;
   }
 }
 
@@ -254,6 +261,11 @@
 
   @media (min-width: $desktop-width) {
     width: 350px;
+  }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-border-error;
   }
 }
 

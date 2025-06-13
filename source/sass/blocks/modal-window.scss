@@ -26,40 +26,91 @@
   background-color: $color-background-white;
   border-radius: 16px;
   box-sizing: border-box;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     width: 510px;
+    padding: 60px 80px;
   }
+}
+
+.modal-window__button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-image: url("/__spritemap#sprite-modal_window_button_close-view");
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    top: 30px;
+    right: 30px;
+  }
+}
+
+.modal-window__title {
+  margin: 0 0 15px;
+  color: $color-text-mariner;
+  text-align: center;
+}
+
+.modal-window__text {
+  text-align: center;
+  margin: 0 0 25px;
+
+  br {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.modal-window__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-window__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .modal-window__input {
   background-color: transparent;
   border: 1px solid $color-border-tundora-opacity-3;
   border-radius: 8px;
-  width: 270px;
-  height: 50px;
+  width: 260px;
+  height: 44px;
   box-sizing: border-box;
 
-  &--feedback {
-    min-height: 94px;
-
-    @media (min-width: $tablet-width) {
-      min-height: 88px;
-    }
-  }
-
   @media (min-width: $tablet-width) {
-    width: 362px;
+    width: 350px;
+    height: 50px;
   }
 
   @media (min-width: $desktop-width) {
     width: 350px;
   }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-border-error;
+  }
 }
 
 .modal-window__label,
 .modal-window__checkbox-input {
-  color: $color-text-pampas-opacity;
+  color: $color-text-tundora-opacity-8;
 }
 
 .modal-window__select-button {
@@ -67,15 +118,16 @@
   height: 16px;
   background-color: transparent;
   border: none;
-  background-image: url("/__spritemap#sprite-arrow_down-view");
+  background-image: url("/__spritemap#sprite-arrow_down_mw-view");
   rotate: 180deg;
   position: absolute;
-  top: 18px;
-  right: 31px;
+  top: 14px;
+  right: 20px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    right: 21px;
+    top: 17px;
+    right: 20px;
   }
 
   &--active {
@@ -87,6 +139,33 @@
   position: relative;
 }
 
+.modal-window__fake-input {
+  width: 260px;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid $color-border-tundora-opacity-3;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  caret-color: transparent;
+  padding: 15px 17px;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+  }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-border-error;
+  }
+}
+
 .modal-window__select-list {
   display: none;
   margin: 5px 0 0;
@@ -94,7 +173,7 @@
   padding: 0;
   border-radius: 8px;
   background-color: $color-background-white;
-  border: 1px solid $color-background-white;
+  border: 1px solid $color-background-tundora;
   width: 260px;
   box-sizing: border-box;
 
@@ -160,7 +239,12 @@
 }
 
 .modal-window__label-checkbox {
-  color: $color-text-white;
+  color: $color-text-tundora-opacity-9;
+  width: 230px;
+
+  @media (min-width: $tablet-width) {
+    width: 310px;
+  }
 
   br {
     @media (min-width: $tablet-width) {
@@ -172,14 +256,14 @@
 .modal-window__input-checkbox {
   width: 20px;
   height: 20px;
-  border: 1px solid transparent;
+  border: 1px solid $color-background-mariner;
   box-sizing: border-box;
   border-radius: 2px;
   outline: none;
 }
 
 .modal-window__button-container {
-  border: 1px solid $color-background-white;
+  border: 1px solid $color-background-mariner;
   background-color: transparent;
   width: 260px;
   height: 44px;
@@ -191,16 +275,17 @@
   align-items: center;
   justify-content: end;
   cursor: pointer;
-  color: $color-text-white;
+  color: $color-text-mariner;
   text-transform: uppercase;
   outline: none;
   gap: 27px;
 
   @media (min-width: $tablet-width) {
     padding: 4px 4px 4px 30px;
-    width: 352px;
+    width: 194px;
     height: 56px;
-    gap: 39px;
+    gap: 0;
+    margin: 0 auto;
   }
 
   &::after {
@@ -209,9 +294,9 @@
     width: 34px;
     height: 34px;
     margin-left: 20px;
-    background-color: $color-background-white;
+    background-color: $color-background-mariner;
     border-radius: 44px;
-    background-image: url("/__spritemap#sprite-arrow_mariner-view");
+    background-image: url("/__spritemap#sprite-arrow-view");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 8px;
