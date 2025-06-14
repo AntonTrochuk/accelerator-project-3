@@ -254,6 +254,7 @@
   outline: none;
   caret-color: transparent;
   padding: 15px 17px;
+  color: $color-text-white;
 
   @media (min-width: $tablet-width) {
     width: 362px;
@@ -269,13 +270,10 @@
   }
 }
 
-.form__item-checkbox {
+.form__label-checkbox {
   display: flex;
   gap: 10px;
   align-items: center;
-}
-
-.form__label-checkbox {
   color: $color-text-white;
 
   br {
@@ -285,13 +283,27 @@
   }
 }
 
-.form__input-checkbox {
+.form__checkbox-icon {
   width: 20px;
   height: 20px;
-  border: 1px solid transparent;
+  border: 1px solid $color-border-white-opacity-7;
   box-sizing: border-box;
   border-radius: 2px;
   outline: none;
+
+  &--on {
+    border: 1px solid $color-background-white;
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-check-view");
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-border-error;
+  }
 }
 
 .form__button-container {

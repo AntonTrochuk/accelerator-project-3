@@ -165,8 +165,8 @@ const newsSlider = new Swiper(newsSwiper, {
   },
 
   navigation: {
-    nextEl: '.news__button--next',
-    prevEl: '.news__button--prev',
+    nextEl: '.news__button-small--next',
+    prevEl: '.news__button-small--prev',
     disabledClass: 'disabled',
   },
 });

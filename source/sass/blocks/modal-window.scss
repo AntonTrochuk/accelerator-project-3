@@ -232,24 +232,46 @@
   }
 }
 
-.modal-window__item-checkbox {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
 .modal-window__label-checkbox {
   color: $color-text-tundora-opacity-9;
   width: 230px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
 
   @media (min-width: $tablet-width) {
-    width: 310px;
+    width: 345px;
   }
 
   br {
     @media (min-width: $tablet-width) {
       display: none;
     }
+  }
+}
+
+.modal-window__checkbox-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-background-mariner;
+  background-color: $color-background-mariner;
+  box-sizing: border-box;
+  border-radius: 2px;
+  outline: none;
+
+  &--on {
+    border: 1px solid $color-background-mariner;
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-check-view");
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--error {
+    background-color: $color-error;
+    border-color: $color-border-error;
   }
 }
 

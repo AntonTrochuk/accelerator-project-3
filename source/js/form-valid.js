@@ -9,6 +9,16 @@ const modalInputs = document.querySelectorAll ('.modal-window__input');
 const modalFakeInput = document.querySelector('.modal-window__fake-input');
 const modalCity = document.getElementById('modal-city');
 
+
+const realCheckbox = document.getElementById('checkbox');
+const checkIcon = document.querySelector('.form__checkbox-icon');
+const checkItem = document.querySelector('.form__label-checkbox');
+
+
+const modalRealCheckbox = document.getElementById('modal-checkbox');
+const modalCheckIcon = document.querySelector('.modal-window__checkbox-icon');
+const modalCheckItem = document.querySelector('.modal-window__label-checkbox');
+
 const formValid = () => {
 
   button.addEventListener('click', () => {
@@ -24,6 +34,12 @@ const formValid = () => {
       fakeInput.classList.add('select__fake-input--error');
     } else {
       fakeInput.classList.remove('select__fake-input--error');
+    }
+
+    if (!realCheckbox.checked) {
+      checkIcon.classList.add('form__checkbox-icon--error');
+    } else {
+      checkIcon.classList.remove('form__checkbox-icon--error');
     }
   });
 
@@ -41,6 +57,30 @@ const formValid = () => {
       modalFakeInput.classList.add('modal-window__fake-input--error');
     } else {
       modalFakeInput.classList.remove('modal-window__fake-input--error');
+    }
+
+    if (!modalRealCheckbox.checked) {
+      modalCheckIcon.classList.add('modal-window__checkbox-icon--error');
+    } else {
+      modalCheckIcon.classList.remove('modal-window__checkbox-icon--error');
+    }
+  });
+
+  checkItem.addEventListener('click', () => {
+    if (realCheckbox.checked) {
+      checkIcon.classList.remove('form__checkbox-icon--error');
+      checkIcon.classList.add('form__checkbox-icon--on');
+    } else {
+      checkIcon.classList.remove('form__checkbox-icon--on');
+    }
+  });
+
+  modalCheckItem.addEventListener('click', () => {
+    if (modalRealCheckbox.checked) {
+      modalCheckIcon.classList.remove('modal-window__checkbox-icon--error');
+      modalCheckIcon.classList.add('modal-window__checkbox-icon--on');
+    } else {
+      modalCheckIcon.classList.remove('modal-window__checkbox-icon--on');
     }
   });
 };
