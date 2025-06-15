@@ -51,6 +51,15 @@
     top: 30px;
     right: 30px;
   }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .modal-window__title {
@@ -92,6 +101,7 @@
   width: 260px;
   height: 44px;
   box-sizing: border-box;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 350px;
@@ -105,6 +115,17 @@
   &--error {
     background-color: $color-error;
     border-color: $color-border-error;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: $color-background-tundora;
+  }
+
+  &:disabled {
+    border-color: $color-disabled-input-border;
+    background-color: $color-disabled-input;
   }
 }
 
@@ -164,6 +185,17 @@
     background-color: $color-error;
     border-color: $color-border-error;
   }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: $color-background-tundora;
+  }
+
+  &:disabled {
+    border-color: $color-disabled-input-border;
+    background-color: $color-disabled-input;
+  }
 }
 
 .modal-window__select-list {
@@ -182,10 +214,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 362px;
-  }
-
-  @media (min-width: $desktop-width) {
     width: 350px;
   }
 }
@@ -249,6 +277,30 @@
       display: none;
     }
   }
+
+  &:hover .modal-window__checkbox-icon,
+  &:focus-visible .modal-window__checkbox-icon {
+    border-color: $color-background-mariner;
+    background-color: $color-background-white;
+  }
+
+  &:disabled .modal-window__checkbox-icon {
+    border-color: $color-background-white;
+    background-color: $color-border-white-opacity-6;
+  }
+
+  &:hover .modal-window__checkbox-icon--on,
+  &:focus-visible .modal-window__checkbox-icon--on {
+    border-color: $color-background-mariner;
+    background-color: $color-background-mariner;
+    background-image: url("/__spritemap#sprite-check_white-view");
+  }
+
+  &:disabled .modal-window__checkbox-icon--on {
+    border-color: $color-disabled;
+    background-color: $color-disabled;
+    background-image: url("/__spritemap#sprite-check_disabled-view");
+  }
 }
 
 .modal-window__checkbox-icon {
@@ -267,11 +319,35 @@
     background-size: 10px 10px;
     background-repeat: no-repeat;
     background-position: center;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-background-mariner;
+      background-color: $color-background-mariner;
+      background-image: url("/__spritemap#sprite-check_white-view");
+    }
+
+    &:disabled {
+      border-color: $color-disabled;
+      background-color: $color-disabled;
+      background-image: url("/__spritemap#sprite-check_disabled-view");
+    }
   }
 
   &--error {
     background-color: $color-error;
     border-color: $color-border-error;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-background-mariner;
+    background-color: $color-background-white;
+  }
+
+  &:disabled {
+    border-color: $color-background-white;
+    background-color: $color-border-white-opacity-6;
   }
 }
 
@@ -326,7 +402,47 @@
     @media (min-width: $tablet-width) {
       width: 46px;
       height: 46px;
-      margin-left: 31px;
+      margin-left: 29px;
     }
+  }
+
+  &:hover {
+    background-color: $color-background-mariner;
+    color: $color-text-white;
+  }
+
+  &:active {
+    background-color: $color-background-mariner;
+    color: $color-text-hover-white;
+  }
+
+  &:disabled {
+    background-color: $color-background-white;
+    color: $color-disabled;
+    border-color: $color-disabled;
+  }
+
+  &:hover::after {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_hover-view");
+    background-size: 10px;
+  }
+
+  &:active::after {
+    background-color: $color-background-white;
+    background-image: url("/__spritemap#sprite-arrow_active-view");
+    background-size: 10px;
+  }
+
+  &:focus-visible::after {
+    background-color: $color-background-mariner;
+    background-image: url("/__spritemap#sprite-arrow_focus-view");
+    background-size: 10px;
+  }
+
+  &:disabled::after {
+    background-color: $color-disabled;
+    background-image: url("/__spritemap#sprite-arrow_disabled-view");
+    background-size: 8px;
   }
 }

@@ -79,10 +79,10 @@
                   </button>
                 </li>
                 <li class="hero__navigation-item">
-                  <button class="hero__navigation-button hero__navigation-button-arrow text-wr" type="button" data-toggle="news">
+                  <button class="hero__navigation-button hero__navigation-button-arrow text-wr" type="button" data-toggle="news-swiper">
                     Новости
                   </button>
-                  <ul class="hero__navigation-list-subgroup" id="news">
+                  <ul class="hero__navigation-list-subgroup" id="news-swiper">
                     <li class="hero__navigation-item-subgroup">
                       <a class=" hero__navigation-text-subgroup text-wr" href="#">
                         Семинары
@@ -155,7 +155,7 @@
               <source width="320" height="568" type="image/webp" srcset="./img/hero/hero_mobile_2@1x.webp 1x, ./img/hero/hero_mobile_2@2x.webp 2x">
               <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="./img/hero/hero_desktop_2@1x.jpg 1x, ./img/hero/hero_desktop_2@2x.jpg 2x">
               <source media="(min-width: 768px)" width="768" height="1024" type="image/jpg" srcset="./img/hero/hero_tablet_2@1x.jpg 1x, ./img/hero/hero_tablet_2@2x.jpg 2x">
-              <img src="./img/hero/hero_mobile_2@1x.jpg" srcset="./img/hero/hero_mobile_2@2x.jpg 2x" width="320" height="568" alt="Студентка.">
+              <img src="./img/hero/hero_mobile_2@1x.jpg" srcset="./img/hero/hero_mobile_2@2x.jpg 2x" width="320" height="568" alt="Студенты.">
             </picture>
             <div class="hero__content">
               <div class="hero__content-nebo nebo nebo--tr">
@@ -184,7 +184,7 @@
               <source width="320" height="568" type="image/webp" srcset="./img/hero/hero_mobile_3@1x.webp 1x, ./img/hero/hero_mobile_3@2x.webp 2x">
               <source media="(min-width:1440px)" width="1440" height="800" type="image/jpg" srcset="./img/hero/hero_desktop_3@1x.jpg 1x, ./img/hero/hero_desktop_3@2x.jpg 2x">
               <source media="(min-width: 768px)" width="768" height="1024" type="image/jpg" srcset="./img/hero/hero_tablet_3@1x.jpg 1x, ./img/hero/hero_tablet_3@2x.jpg 2x">
-              <img src="./img/hero/hero_mobile_3@1x.jpg" srcset="./img/hero/hero_mobile_3@2x.jpg 2x" width="320" height="568" alt="Студентка.">
+              <img src="./img/hero/hero_mobile_3@1x.jpg" srcset="./img/hero/hero_mobile_3@2x.jpg 2x" width="320" height="568" alt="Студенты работаю над проектом.">
             </picture>
             <div class="hero__content">
               <div class="hero__content-nebo nebo nebo--tr">
@@ -323,7 +323,7 @@
               <source width="290" height="400" type="image/webp" srcset="./img/programs/program_mobile2@1x.webp 1x, ./img/programs/program_mobile2@2x.webp 2x">
               <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="./img/programs/program_desktop2@1x.jpg 1x, ./img/programs/program_desktop2@2x.jpg 2x">
               <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="./img/programs/program_tablet2@1x.jpg 1x, ./img/programs/program_tablet2@2x.jpg 2x">
-              <img src="./img/programs/program_mobile2@1x.jpg" srcset=".img/programs/program_mobile2@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+              <img src="./img/programs/program_mobile2@1x.jpg" srcset=".img/programs/program_mobile2@2x.jpg 2x" width="290" height="400" alt="Фото волонтера.">
             </picture>
             <div class="programs__item-content-block nebo nebo--tr block-v">
               <h4 class="programs__item-title heading-h4 title-v">
@@ -348,7 +348,7 @@
               <source width="290" height="400" type="image/webp" srcset="./img/programs/program_mobile3@1x.webp 1x, ./img/programs/program_mobile3@2x.webp 2x">
               <source media="(min-width:1440px)" width="392" height="420" type="image/jpg" srcset="./img/programs/program_desktop3@1x.jpg 1x, ./img/programs/program_desktop3@2x.jpg 2x">
               <source media="(min-width: 768px)" width="324" height="420" type="image/jpg" srcset="./img/programs/program_tablet3@1x.jpg 1x, ./img/programs/program_tablet3@2x.jpg 2x">
-              <img src="./img/programs/program_mobile3@1x.jpg" srcset=".img/programs/program_mobile3@2x.jpg 2x" width="290" height="400" alt="Рабочий процесс.">
+              <img src="./img/programs/program_mobile3@1x.jpg" srcset=".img/programs/program_mobile3@2x.jpg 2x" width="290" height="400" alt="Учебный процесс.">
             </picture>
             <div class="programs__item-content-block nebo nebo--tr block-l">
               <h4 class="programs__item-title heading-h4 title-l">
@@ -386,7 +386,7 @@
         </div>
       </div>
     </section>
-    <section class="main-container__grant grant" data-test="grant">
+    <section class="main-container__grant grant" data-test="grant" id="grant">
       <div class="grant__container">
         <div class="grant__content-blok">
           <h2 class="grant__title heading-h3-a">
@@ -403,7 +403,7 @@
             <source width="290" height="200" type="image/webp" srcset="./img/grant/grant_mobile@1x.webp 1x, ./img/grant/grant_mobile@2x.webp 2x">
             <source media="(min-width:1440px)" width="498" height="363" type="image/jpg" srcset="./img/grant/grant_desktop@1x.jpg 1x, ./img/grant/grant_desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="678" height="375" type="image/jpg" srcset="./img/grant/grant_tablet@1x.jpg 1x, ./img/grant/grant_tablet@2x.jpg 2x">
-            <img src="./img/grant/grant_mobile@1x.jpg" srcset="./img/grant/grant_mobile@2x.jpg 2x" width="290" height="200" alt="Студентка.">
+            <img src="./img/grant/grant_mobile@1x.jpg" srcset="./img/grant/grant_mobile@2x.jpg 2x" width="290" height="200" alt="Указатели.">
           </picture>
         </div>
         <div class="grant__description-blok">
@@ -435,7 +435,7 @@
         </div>
       </div>
     </section>
-    <section class="main-container__news news" data-test="news">
+    <section class="main-container__news news" data-test="news" id="news">
       <div class="news__container news-swiper">
         <h2 class="news__title heading-h3-a">
           Новости и материалы
@@ -589,7 +589,7 @@
         </div>
       </div>
     </section>
-    <section class="main-container__faq faq" data-test="FAQ">
+    <section class="main-container__faq faq" data-test="FAQ" id="faq">
       <div class="faq__container">
         <h3 class="faq__title heading-h3-a">
           Вопросы и ответы
@@ -674,7 +674,7 @@
         </ul>
       </div>
     </section>
-    <section class="main-container__reviews reviews" data-test="reviews">
+    <section class="main-container__reviews reviews" data-test="reviews" id="reviews">
       <div class="reviews__section">
         <div class="reviews__container reviews-swiper">
           <h3 class="reviews__title heading-h3-a">
@@ -818,7 +818,7 @@
         </div>
       </div>
     </section>
-    <section class="main-container__contacts contacts" data-test="contacts">
+    <section class="main-container__contacts contacts" data-test="contacts" id="contacts">
       <div class="contacts__container">
         <div class="contacts__text-block">
           <h3 class="contacts__title heading-h3-a">
@@ -857,11 +857,11 @@
           <source width="290" height="240" type="image/webp" srcset="./img/contacts/map_mobile@1x.webp 1x, ./img/contacts/map_mobile@2x.webp 2x">
           <source media="(min-width:1440px)" width="1240" height="486" type="image/png" srcset="./img/contacts/map_desktop@1x.png 1x, ./img/contacts/map_desktop@2x.png 2x">
           <source media="(min-width: 768px)" width="678" height="500" type="image/png" srcset="./img/contacts/map_tablet@1x.png 1x, ./img/contacts/map_tablet@2x.png 2x">
-          <img src="./img/contacts/map_mobile@1x.png" srcset="./img/contacts/map_mobile@2x.png 2x" width="290" height="240" alt="Локация компании Lifetour в г.Москва.">
+          <img src="./img/contacts/map_mobile@1x.png" srcset="./img/contacts/map_mobile@2x.png 2x" width="290" height="240" alt="Локация компании Internship в г.Новосибирск.">
         </picture>
       </div>
     </section>
-    <section class="main-container__form form" data-test="form">
+    <section class="main-container__form form" data-test="form" id="form">
       <div class="form__container">
         <div class="form__content">
           <div class="form__text-block">
@@ -898,7 +898,7 @@
                   Выберите город
                 </label>
                 <div class="form__select-wrap select">
-                  <div class="select__fake-input">
+                  <div class="select__fake-input" tabindex="0">
                   </div>
                   <ul class="select__list">
                     <li class="select__item" data-value="saint-petersburg">
@@ -922,7 +922,7 @@
               <li class="form__item-checkbox">
                 <label class="form__label-checkbox">
                   <input class="form__input-checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" required>
-                  <span class="form__checkbox-icon"></span>
+                  <span class="form__checkbox-icon" tabindex="0"></span>
                   <span class="text-ch">
                     Я согласен на обработку моих персональных <br>данных
                   </span>

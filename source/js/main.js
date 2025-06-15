@@ -126,9 +126,57 @@ const programsSlider = new Swiper(programsSwiper, {
 
 programsSlider.update();
 
-// БЛОК news
 
 const newsSwiper = document.querySelector('.news-swiper');
+const paginationContainer = document.querySelector('.news__list-pagination');
+const totalSlides = document.querySelectorAll('.swiper-slide').length;
+const visiblePaginationButtons = 4;
+
+
+function createPaginationButtons() {
+  paginationContainer.innerHTML = '';
+  const buttonsToShow = Math.min(totalSlides, visiblePaginationButtons);
+
+  for (let i = 0; i < buttonsToShow; i++) {
+    const li = document.createElement('li');
+    li.className = 'news__item-pagination';
+
+    const button = document.createElement('button');
+    button.className = `news__button-pagination button-text-p ${i === 0 ? 'news__button-pagination--active' : ''}`;
+    button.type = 'button';
+    button.textContent = i + 1;
+    button.dataset.index = i;
+
+    li.appendChild(button);
+    paginationContainer.appendChild(li);
+  }
+}
+
+function updatePagination(swiper) {
+  const buttons = document.querySelectorAll('.news__button-pagination');
+  const currentIndex = swiper.activeIndex;
+  const lastPossibleStart = Math.max(0, totalSlides - visiblePaginationButtons);
+  let startIndex = 0;
+
+  if (currentIndex >= visiblePaginationButtons - 1 && currentIndex < lastPossibleStart) {
+    startIndex = currentIndex - Math.floor(visiblePaginationButtons / 2) + 1;
+  } else if (currentIndex >= lastPossibleStart) {
+    startIndex = lastPossibleStart;
+  }
+
+  buttons.forEach((button, i) => {
+    const slideIndex = startIndex + i;
+    button.textContent = slideIndex + 1;
+    button.dataset.index = slideIndex;
+
+    if (slideIndex === currentIndex) {
+      button.classList.add('news__button-pagination--active');
+    } else {
+      button.classList.remove('news__button-pagination--active');
+    }
+  });
+}
+
 const newsSlider = new Swiper(newsSwiper, {
   modules: [Navigation, Grid],
   loop: false,
@@ -169,9 +217,24 @@ const newsSlider = new Swiper(newsSwiper, {
     prevEl: '.news__button-small--prev',
     disabledClass: 'disabled',
   },
+
+  on: {
+    init: function() {
+      createPaginationButtons();
+    },
+    slideChange: function() {
+      updatePagination(this);
+    }
+  }
 });
 
-newsSlider.update();
+paginationContainer.addEventListener('click', (e) => {
+  const button = e.target.closest('.news__button-pagination');
+  if (button) {
+    const index = parseInt(button.dataset.index, 10);
+    newsSlider.slideTo(index);
+  }
+});
 
 const reviewsSlider = new Swiper('.reviews-swiper', {
   modules: [Navigation, Scrollbar],

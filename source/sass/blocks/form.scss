@@ -145,6 +145,7 @@
   box-sizing: border-box;
   outline: none;
   color: $color-text-white;
+  cursor: pointer;
 
   &--feedback {
     min-height: 94px;
@@ -165,6 +166,17 @@
   &--error {
     background-color: $color-error;
     border-color: $color-border-error;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: $color-background-white;
+  }
+
+  &:disabled {
+    border-color: $color-border-white-opacity-3;
+    background-color: $color-border-white-opacity;
   }
 }
 
@@ -268,6 +280,17 @@
     background-color: $color-error;
     border-color: $color-border-error;
   }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    border-color: $color-background-white;
+  }
+
+  &:disabled {
+    border-color: $color-border-white-opacity-3;
+    background-color: $color-border-white-opacity;
+  }
 }
 
 .form__label-checkbox {
@@ -275,11 +298,35 @@
   gap: 10px;
   align-items: center;
   color: $color-text-white;
+  cursor: pointer;
 
   br {
     @media (min-width: $tablet-width) {
       display: none;
     }
+  }
+
+  &:hover .form__checkbox-icon,
+  &:focus-visible .form__checkbox-icon {
+    border-color: $color-background-white;
+  }
+
+  &:disabled .form__checkbox-icon {
+    border-color: $color-background-white;
+    background-color: $color-border-white-opacity-6;
+  }
+
+  &:hover .form__checkbox-icon--on,
+  &:focus-visible .form__checkbox-icon--on {
+    border-color: $color-background-white;
+    background-color: transparent;
+    background-image: url("/__spritemap#sprite-check_white-view");
+  }
+
+  &:disabled .form__checkbox-icon--on {
+    border-color: $color-disabled;
+    background-color: $color-disabled;
+    background-image: url("/__spritemap#sprite-check_disabled-view");
   }
 }
 
@@ -298,11 +345,34 @@
     background-size: 10px 10px;
     background-repeat: no-repeat;
     background-position: center;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-background-white;
+      background-color: transparent;
+      background-image: url("/__spritemap#sprite-check_white-view");
+    }
+
+    &:disabled {
+      border-color: $color-disabled;
+      background-color: $color-disabled;
+      background-image: url("/__spritemap#sprite-check_disabled-view");
+    }
   }
 
   &--error {
     background-color: $color-error;
     border-color: $color-border-error;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-background-white;
+  }
+
+  &:disabled {
+    border-color: $color-background-white;
+    background-color: $color-border-white-opacity-6;
   }
 }
 
@@ -322,17 +392,16 @@
   color: $color-text-white;
   text-transform: uppercase;
   outline: none;
-  gap: 27px;
+  gap: 54px;
 
   @media (min-width: $tablet-width) {
     padding: 4px 4px 4px 30px;
     width: 352px;
     height: 56px;
-    gap: 39px;
+    gap: 77px;
   }
 
-  &::after {
-    content: "";
+  .form__button-toggle {
     display: block;
     width: 34px;
     height: 34px;
@@ -350,4 +419,47 @@
       margin-left: 31px;
     }
   }
+
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-background-white;
+    color: $color-text-mariner;
+  }
+
+  &:active {
+    background-color: $color-background-white;
+    color: $color-text-active-mariner;
+  }
+
+  &:disabled {
+    background-color: $color-background-mariner;
+    color: $color-disabled;
+    border-color: $color-disabled;
+  }
+}
+
+
+.form__button-container:hover .form__button-toggle {
+  background-color: $color-background-mariner;
+  background-image: url("/__spritemap#sprite-arrow_hover_white-view");
+  background-size: 10px;
+}
+
+.form__button-container:active .form__button-toggle {
+  background-color: $color-background-mariner;
+  background-image: url("/__spritemap#sprite-arrow_active_white-view");
+  background-size: 10px;
+}
+
+.form__button-container:focus-visible .form__button-toggle {
+  background-color: $color-background-mariner;
+  background-image: url("/__spritemap#sprite-arrow_focus-view");
+  background-size: 10px;
+}
+
+.form__button-container:disabled .form__button-toggle {
+  background-color: $color-disabled;
+  background-image: url("/__spritemap#sprite-arrow_disabled-view");
+  background-size: 8px;
 }
